@@ -1,0 +1,21 @@
+% Area calculation using switch-case
+shape = input('Enter shape (circle, rectangle, triangle): ', 's');
+switch lower(shape)
+case 'circle'
+radius = input('Enter radius: ');
+area = pi * radius^2;
+case 'rectangle'
+length = input('Enter length: ');
+breadth = input('Enter breadth: ');
+area = length * breadth;
+case 'triangle'
+base = input('Enter base: ');
+height = input('Enter height: ');
+area = 0.5 * base * height;
+otherwise
+disp('Invalid shape!');
+area = NaN;
+end
+if ~isnan(area)
+disp(['The area of the ', shape, ' is ', num2str(area)]);
+end
