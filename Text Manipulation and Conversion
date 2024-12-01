@@ -1,0 +1,8 @@
+% Text manipulation and conversion
+text = 'MATLAB';
+reversedText = flip(text); % Reverse string
+asciiValues = double(reversedText); % Convert to ASCII
+disp(['Original Text: ', text]);
+disp(['Reversed Text: ', reversedText]);
+disp('ASCII Values of Reversed Text:');
+disp(asciiValues);
