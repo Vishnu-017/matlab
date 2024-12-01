@@ -1,0 +1,19 @@
+% Histogram Equalization
+img = imread('example.jpg'); % Load image
+grayImg = rgb2gray(img); % Convert to grayscale
+% Histogram Equalization
+equalizedImg = histeq(grayImg);
+% Plotting
+figure;
+subplot(2, 2, 1);
+imshow(grayImg);
+title('Original Image');
+subplot(2, 2, 2);
+imhist(grayImg);
+title('Original Histogram');
+subplot(2, 2, 3);
+imshow(equalizedImg);
+title('Equalized Image');
+subplot(2, 2, 4);
+imhist(equalizedImg);
+title('Equalized Histogram');
