@@ -1,0 +1,11 @@
+% Check for symmetry and positivity
+A = [1, 2, 3; 2, 5, 6; 3, 6, 9];
+isSymmetric = isequal(A, A'); % Check symmetry
+isPositive = all(A(:) > 0); % Check positivity
+if isSymmetric && isPositive
+disp('The matrix is symmetric and all elements are positive.');
+elseif isSymmetric
+disp('The matrix is symmetric but not all elements are positive.');
+else
+disp('The matrix is not symmetric.');
+end
