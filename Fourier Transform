@@ -1,0 +1,23 @@
+% Fourier Transform Visualization
+fs = 1000; % Sampling frequency
+t = 0:1/fs:1-1/fs; % Time vector
+f1 = 50; % Frequency of signal 1
+f2 = 120; % Frequency of signal 2
+signal = sin(2*pi*f1*t) + 0.5*sin(2*pi*f2*t); % Combined signal
+% Fourier Transform
+N = length(signal);
+fftSignal = fft(signal);
+magnitude = abs(fftSignal/N); % Normalize
+frequencies = (0:N-1)*(fs/N); % Frequency vector
+% Plotting
+figure;
+subplot(2, 1, 1);
+plot(t, signal);
+title('Original Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+subplot(2, 1, 2);
+plot(frequencies(1:N/2), magnitude(1:N/2)); % Plot half of spectrum
+title('Magnitude Spectrum');
+xlabel('Frequency (Hz)');
+ylabel('Magnitude');
