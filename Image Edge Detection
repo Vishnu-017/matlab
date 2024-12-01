@@ -1,0 +1,11 @@
+% Edge detection using Sobel operator
+img = imread('example.jpg');
+grayImg = rgb2gray(img); % Convert to grayscale
+edges = edge(grayImg, 'Sobel'); % Sobel edge detection
+figure;
+subplot(1, 2, 1);
+imshow(grayImg);
+title('Original Image');
+subplot(1, 2, 2);
+imshow(edges);
+title('Edge Detection');
