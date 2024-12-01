@@ -1,0 +1,13 @@
+% Compute factorial using loop and vectorization
+n = 1:10;
+% Loop-based factorial computation
+factorialLoop = ones(size(n));
+for i = n
+factorialLoop(i) = prod(1:i);
+end
+% Vectorized factorial computation
+factorialVectorized = arrayfun(@(x) prod(1:x), n);
+disp('Factorials computed using loop:');
+disp(factorialLoop);
+disp('Factorials computed using vectorization:');
+disp(factorialVectorized);
