@@ -1,0 +1,14 @@
+function result = isPrime(n)
+if n < 2
+result = false;
+else
+result = all(mod(n, 2:n-1) ~= 0);
+end
+end
+% Prime checking using user-defined function
+num = 17; % Example number
+if isPrime(num)
+disp([num2str(num), ' is a prime number.']);
+else
+disp([num2str(num), ' is not a prime number.']);
+end
